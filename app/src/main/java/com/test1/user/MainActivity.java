@@ -12,29 +12,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //first name
-        TextView txtHello = findViewById(R.id.hellotxt);
-        txtHello.setText("First Name");
-
-        //second name
-        TextView name2 = findViewById(R.id.hellotxt);
-        name2.setText("Second Name");
     }
-
+//onBtnClick
     public void onBtnClick (View view) {
-        TextView txtHello = findViewById(R.id.hellotxt);
-        TextView name2 = findViewById(R.id.hellotxt);
+        //display
+        TextView txtFirstName = findViewById(R.id.hellotxt);
+        TextView txtLastName = findViewById(R.id.textView);
+        TextView txtEmail = findViewById(R.id.textView2);
 
-        //user input
-        // first name
-        EditText edtTxt = findViewById(R.id.editTextText);
-        txtHello.setText("First Name: " + edtTxt.getText().toString());
+        //entry
+        EditText edtTxtFirstName = findViewById(R.id.editTextText);
+        EditText edtTxtSecondName = findViewById(R.id.editTextText2);
+        EditText edtTxtEmail = findViewById(R.id.editTextTextEmailAddress);
 
-        //second name
-        EditText secondName = findViewById(R.id.editTextText2);
-        name2.setText("Second Name: " + secondName.getText().toString());
-
+        //set targets
+        txtFirstName.setText("First Name: " + edtTxtFirstName.getText().toString());
+        txtLastName.setText("Last name: " + edtTxtSecondName.getText().toString());
+        txtEmail.setText("Email: " + edtTxtEmail.getText().toString());
 
     }
 }
